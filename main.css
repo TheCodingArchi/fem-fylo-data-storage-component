@@ -131,7 +131,7 @@ main {
 	text-align: center;
 	color: #d2eaf8;
 }
-.attribution a {
+.attribution span a {
 	display: inline-block;
 	text-decoration: none;
 	background-color: #d2eaf8;
@@ -149,5 +149,55 @@ main {
 @media screen and (min-width: 1440px) {
 	body {
 		background-position: left bottom;
+	}
+}
+
+@media screen and (max-width: 484px) {
+	body {
+		background: url('/images/bg-mobile.svg') no-repeat cover;
+	}
+	main {
+		flex-direction: column;
+		align-items: center;
+	}
+	.storage-card {
+		width: 350px;
+		margin-left: initial;
+		margin-top: 140px;
+	}
+	.storage-content {
+		height: 160px;
+		text-align: center;
+	}
+	.storage-bar {
+		width: 290px;
+	}
+	.storage-bar-fill {
+		width: 195px;
+	}
+	.storage-comment {
+		border-radius: 8px;
+		margin: 0 auto -195px;
+	}
+	.storage-comment::after {
+		display: none;
+	}
+}
+
+@media screen and (max-width: 320px) {
+	.logo-icon-card {
+		width: 300px;
+	}
+	.storage-card {
+		width: 300px;
+	}
+	.storage-bar {
+		width: 240px;
+	}
+	.storage-bar-fill {
+		width: 145px;
+	}
+	.attribution span {
+		display: block;
 	}
 }
