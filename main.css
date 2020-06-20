@@ -3,12 +3,14 @@ body {
 	height: 100vh;
 	font-size: 14px;
 }
+/* layout main content */
 main {
 	height: 100vh;
 	display: flex;
 	justify-content: center;
 	align-items: center;
 }
+/* style and layout card containing logo and icons */
 .logo-icon-card {
 	display: flex;
 	align-items: center;
@@ -18,10 +20,12 @@ main {
 	border-radius: 10px 95px 10px 10px;
 	padding-left: 40px;
 }
+/* layout and space out icons */
 .icons {
 	display: flex;
 	margin-top: 25px;
 }
+/* style the icons background */
 .icons-bg {
 	width: 50px;
 	height: 50px;
@@ -37,6 +41,7 @@ main {
 	height: 200px;
 	margin-left: 25px;
 }
+/* stlye, layout and position the data balance box */
 .storage-comment {
 	width: 180px;
 	height: 70px;
@@ -54,6 +59,7 @@ main {
 	font-size: 12px;
 	font-weight: 700;
 }
+/* style and position the pointy end of the data balance box */
 .storage-comment::after {
 	content: "";
 	position: absolute;
@@ -62,6 +68,7 @@ main {
 	border-left: 20px solid transparent;
 	border-top: 20px solid #ffffff;
 }
+/* style the data balance figure */
 .storage-card .storage-comment > span {
 	color: #000000;
 	font-size: 40px;
@@ -69,6 +76,7 @@ main {
 	display: inline-block;
 	margin-right: 10px;
 }
+/* style the used data content box */
 .storage-content {
 	display: flex;
 	align-items: center;
@@ -87,6 +95,7 @@ main {
 .storage-content p span {
 	font-weight: 700;
 }
+/* style the background of the data storage visualization bar */
 .storage-bar {
 	display: flex;
 	align-items: center;
@@ -96,6 +105,7 @@ main {
 	border-radius: 7.5px;
 	background-color: hsl(229, 57%, 11%);
 }
+/* style the used data visualization */
 .storage-bar-fill {
 	display: flex;
 	justify-content: flex-end;
@@ -106,12 +116,14 @@ main {
 	border-radius: 6px;
 	background-image: linear-gradient(to right, hsl(6, 100%, 80%), hsl(335, 100%, 65%));
 }
+/* style the stop end of the used data visualization */
 .storage-bar-fill-end {
 	width: 10px;
 	height: 10px;
 	border-radius: 50%;
 	background-color: #ffffff;
 }
+/* space out the data storage range figures */
 .storage {
 	display: flex;
 	justify-content: space-between;
@@ -139,7 +151,7 @@ main {
 	border-radius: 3px;
 	color: hsl(229, 57%, 11%);
 }
-
+/* Add mobile responsiveness for major screens */
 @media screen and (max-width: 1280px) {
 	body {
 		background-position: left bottom;
@@ -159,6 +171,7 @@ main {
 	main {
 		flex-direction: column;
 		align-items: center;
+		justify-content: center;
 	}
 	.storage-card {
 		width: 350px;
@@ -168,6 +181,7 @@ main {
 	.storage-content {
 		height: 160px;
 		text-align: center;
+		font-size: 16px;
 	}
 	.storage-bar {
 		width: 290px;
@@ -175,10 +189,12 @@ main {
 	.storage-bar-fill {
 		width: 195px;
 	}
+	/* Re-position the data balance content. Pushes it to the middle and down */
 	.storage-comment {
 		border-radius: 8px;
 		margin: 0 auto -195px;
 	}
+	/* Remove the pointy end of the data balance box */
 	.storage-comment::after {
 		display: none;
 	}
